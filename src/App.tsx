@@ -30,10 +30,7 @@ const App = () => {
             const result = (await response.json()) as JokeApi;
             const newJoke = new Joke(result);
             setJokes(prevJokes => [...prevJokes, newJoke]);
-            console.log(result.joke, jokes)
           } catch (error) {
-            // TODO ugh
-            console.log(4)
             console.error((error as Error).message);
           }
         } else {
