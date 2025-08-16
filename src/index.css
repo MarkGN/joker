@@ -70,6 +70,7 @@ button:focus-visible {
 
 .left-joke {
   text-align: left;
+  color: black;
   font-size: 1.2em;
   background-color: #fee;
   border-color: #800;
@@ -78,6 +79,7 @@ button:focus-visible {
 
 .right-joke {
   text-align: right;
+  color: black;
   font-size: 1.2em;
   background-color: #efe;
   border-color: #080;
