@@ -77,6 +77,7 @@ button:focus-visible {
   border-style: dashed;
   padding-left: 10px;
   padding-right: 10px;
+  margin: 5px;
 }
 
 .right-joke {
@@ -88,6 +89,7 @@ button:focus-visible {
   border-style: dashed;
   padding-left: 10px;
   padding-right: 10px;
+  margin: 5px;
 }
 
 .blink {
