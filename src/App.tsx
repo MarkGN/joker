@@ -19,8 +19,9 @@ const App = () => {
         // TODO type checking of incoming JSON
         // TODO make this accept two-part jokes
         const url = "https://v2.jokeapi.dev/joke/Any?type=single";
+        const url2 = "https://v2.jokeapi.dev/joke/Any?type=twopart";
         try {
-            const response = await fetch(url);
+            const response = await fetch((Math.random() < 0.5) ? url : url2);
             if (!response.ok) {
               throw new Error(`Response status: ${response.status}`);
             }

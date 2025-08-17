@@ -75,6 +75,8 @@ button:focus-visible {
   background-color: #fee;
   border-color: #800;
   border-style: dashed;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .right-joke {
@@ -84,6 +86,8 @@ button:focus-visible {
   background-color: #efe;
   border-color: #080;
   border-style: dashed;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .blink {

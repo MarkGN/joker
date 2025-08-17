@@ -4,6 +4,12 @@ export interface JokeApi {
   id: number;
 }
 
+export interface JokeApi2Part {
+  setup: string;
+  delivery: string;
+  id: number;
+}
+
 export interface JokeProps {
   lines: string[];
   displayedLinesCount: number;
@@ -18,8 +24,14 @@ export class Joke {
   public displayedLinesCount: number;
   public id: number;
 
-  constructor(joke: JokeApi) {
-    this.lines = joke.joke.split(/(?<=[.?!])\s+/);
+  constructor(joke: JokeApi | JokeApi2Part) {
+    var input: string = "";
+    if ("joke" in joke) {
+      input = joke.joke;
+    } else if ("setup" in joke && "delivery" in joke) {
+      input = joke.setup + " " + joke.delivery;
+    }
+    this.lines = input.split(/(?<=[.?!])\s+/);
     this.displayedLinesCount = 1;
     this.id = idCounter++;
   }
