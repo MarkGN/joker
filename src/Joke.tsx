@@ -29,9 +29,9 @@ export class Joke {
     if ("joke" in joke) {
       input = joke.joke;
     } else if ("setup" in joke && "delivery" in joke) {
-      input = joke.setup + " " + joke.delivery;
+      input = joke.setup + "\n" + joke.delivery;
     }
-    this.lines = input.split(/(?<=[.?!])\s+/);
+    this.lines = input.split(/(?<=[.?!\n])\s+/);
     this.displayedLinesCount = 1;
     this.id = idCounter++;
   }
