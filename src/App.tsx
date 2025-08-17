@@ -20,9 +20,8 @@ const App = () => {
       if (jokes.length===0 || (jokes[jokes.length - 1].isFullyExpanded())) {
         // TODO type checking of incoming JSON
         // TODO make this accept two-part jokes
-        const url = "https://v2.jokeapi.dev/joke/Any?&lang=en&idRange=" + String(index) + "-" + String(index);
+        const url = "https://v2.jokeapi.dev/joke/Any?&lang=en&idRange=" + String(index);
         index = (index + 1) % numJokes; // Increment index for next joke
-        console.log(url);
         
         try {
             const response = await fetch(url);
