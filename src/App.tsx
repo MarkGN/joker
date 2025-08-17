@@ -11,13 +11,11 @@ const App = () => {
     async function expandOrGetJoke() {
       // Prevent multiple clicks from triggering multiple fetches
       if (gettingJoke) {
-        console.log("Already getting a joke, ignoring click.");
         return;
       } else {
         gettingJoke = true;
       }
       if (jokes.length===0 || (jokes[jokes.length - 1].isFullyExpanded())) {
-      console.log("Fetching a joke...");
         // TODO type checking of incoming JSON
         // TODO make this accept two-part jokes
         const url = "https://v2.jokeapi.dev/joke/Any?type=single";
@@ -34,7 +32,6 @@ const App = () => {
             console.error((error as Error).message);
           }
         } else {
-          console.log("Expanding joke...");
           jokes[jokes.length - 1].expand();
           setJokes([...jokes]); // Trigger re-render
         }
